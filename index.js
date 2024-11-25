@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://Krishnas-world:Krishna121%40@krishas-world.wiflcjl.mongodb.net/DB', {
+mongoose.connect('ur db', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -25,6 +25,12 @@ db.once('open', () => console.log("Connected to the database"));
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'home.html')); // Serve home.html from the root directory
 });
+
+
+// app.get("/income", (req, res) => {
+//     res.sendFile(path.join(__dirname, 'income.html')); // Serve home.html from the root directory
+// });
+
 
 // Login Route - Serve login.html from root
 app.get("/login", (req, res) => {

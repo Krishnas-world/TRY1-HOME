@@ -62,7 +62,7 @@
             const selectedCertificate = document.getElementById('certificateType').value;
             if (selectedCertificate) {
                 // Redirect user to the respective form page
-                window.location.href = selectedCertificate + ".html";
+                window.location.href = selectedCertificate + ".html"; // if-else-if : selctedCert?income:/income
             } else {
                 alert("Please select a certificate type before proceeding.");
             }
